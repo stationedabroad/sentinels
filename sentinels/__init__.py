@@ -13,7 +13,7 @@ class Sentinel(object):
         self._name = name
         self._existing_instances[self._name] = self
     def __repr__(self):
-        return "<{0}>".format(self._name)
+        return f"<{self._name}>"
     def __getnewargs__(self):
         return (self._name,)
     def __new__(cls, name, obj_id=None): # obj_id is for compatibility with previous versions
